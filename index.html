@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Orion | Final Access</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="noise"></div>
+
+    <div class="terminal">
+
+        <h1>PROJECT ORION</h1>
+
+        <div class="subtitle">
+            ACESSO FINAL
+        </div>
+
+        <!-- Terminal -->
+        <div id="terminalOutput"></div>
+
+        <!-- Campo da chave -->
+        <div id="inputContainer" style="display:none;">
+
+            <div class="keyInput">
+
+                <span>></span>
+
+                <input
+                    id="finalKey"
+                    type="text"
+                    autocomplete="off"
+                    spellcheck="false"
+                    placeholder="Digite a chave final..."
+                >
+
+            </div>
+
+            <button id="decryptBtn">
+                DESCRIPTOGRAFAR
+            </button>
+
+        </div>
+
+        <!-- Vídeo Final -->
+        <div id="videoBox" style="display:none;">
+
+            <h2>✔ MENSAGEM DESCRIPTOGRAFADA</h2>
+
+            <h3>
+                TE VIVO.<br>
+                SEMPRE.<br>
+                AMOR.
+            </h3>
+
+            <video id="rewardVideo" controls preload="metadata">
+                <source src="/Site 3/Video/0706.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+
+            <br><br>
+
+            <a href="/Site 3/Video/0706.mp4" download class="download">
+                ▶ BAIXAR LEMBRANÇA
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        // Permite clicar no botão
+        document.getElementById("decryptBtn")
+            .addEventListener("click", decrypt);
+
+        // Permite apertar Enter
+        document.getElementById("finalKey")
+            .addEventListener("keydown", function(e){
+
+                if(e.key === "Enter"){
+                    decrypt();
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>
